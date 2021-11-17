@@ -4,7 +4,7 @@ var config = {
     showMarkers: false,
     theme: 'dark',
     use3dTerrain: false,
-    title: 'Digital Democracy: Technology in Solidarity with Frontline Technologies',
+    title: 'Technology in Solidarity with Frontline Technologies',
     logo: 'images/Digital Democracy.png',
     bookmarks: '<strong>Bookmarks</strong>: <a href="#page1">Overview</a> | <a href="#page2">Territory mapping with the Waorani (Ecuador)</a> | <a href="#page3">Drone mapping with the Wapichan (Guyana)</a> | <a href="#page4">Monitoring with ECA-Amarakaeri (Peru)</a> | <a href="#page5">Monitoring with PUINAMUDT (Peru)</a> | <a href="#page6">Historical land tenure mapping with the Ogiek (Kenya)</a> | <a href="#page7">Vulnerability mapping with ODI (SE Asia)</a> | <a href="#page8">Biodiversity mapping with the Santo Sunset Environmental Network (Vanuatu)</a> | <a href="#page9">Mapping oral histories with Ohneganos (Canada) | <a href="#page10">Earth Defenders Toolkit and how to use our tools</a><div id="rotate-mobile"><em>For optimal viewing of this storytelling map on mobile, rotate your device to a horizontal orientation.</em><br><br><img src="images/device.png">',
 	footer: '<a href="https://digital-democracy.org" class="fas fa-link" target="_blank"></a>&nbsp;<a href="https://www.instagram.com/digidem/" class="fab fa-instagram" target="_blank"></a>&nbsp;<a href="http://twitter.com/DigiDem" class="fab fa-twitter" target="_blank"></a>&nbsp;<a href="https://www.facebook.com/digidemocracy/" class="fab fa-facebook-f" target="_blank"></a>&nbsp;<a href="https://www.linkedin.com/company/-digital-democracy/" class="fab fa-linkedin" target="_blank"></a>&nbsp;<a href="https://www.youtube.com/user/digitaldemocracycam" class="fab fa-youtube" target="_blank"></a>',
