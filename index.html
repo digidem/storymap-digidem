@@ -179,11 +179,14 @@
 			font-size: 1.5rem;
 			font-weight: 1000;
 		    }
-
+			#footer p {
+				padding: 0;
+			}
             #rotate-mobile { 
             display: inline-block;
             margin-top: 25px; 
             }
+			
         }
 
         /* Fix issue on mobile browser where scroll breaks  */
@@ -247,9 +250,9 @@
     }
 
     if (config.logo) {
-    var image = new Image();
-	image.src = config.logo;
-	header.appendChild(image);
+		var image = new Image();
+		image.src = config.logo;
+		header.appendChild(image);
     }
    
     if (config.subtitle) {
@@ -316,12 +319,18 @@
     
 
     if (config.bookmarks) {
-    var bookmarksText = document.createElement('h5');
-    bookmarksText.innerHTML = config.bookmarks;
-	header.appendChild(bookmarksText);
-	var footerText = document.createElement('p');
-    footerText.innerHTML = config.bookmarks;
-    footer.appendChild(footerText);
+		var bookmarksText = document.createElement('h5');
+		bookmarksText.innerHTML = config.bookmarks;
+		header.appendChild(bookmarksText);
+		var footerText = document.createElement('p');
+		footerText.innerHTML = config.bookmarks;
+		footer.appendChild(footerText);
+    }
+	
+	if (config.mobileview) {
+		var mobileText = document.createElement('p');
+		mobileText.innerHTML = config.mobileview;
+		header.appendChild(mobileText);
     }
 	
     if (config.footer) {
