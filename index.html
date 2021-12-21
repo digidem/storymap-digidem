@@ -288,6 +288,12 @@
             image.src = record.image;
             chapter.appendChild(image);
         }
+
+        if (record.author) {
+            author = document.createElement('p');
+            author.innerHTML = '<em>'+ record.author + '</em>';
+            chapter.appendChild(author);
+        }
     
         if (record.description) {
             var story = document.createElement('p');
