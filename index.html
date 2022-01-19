@@ -457,7 +457,8 @@
             });
             // add the DEM source as a terrain layer with exaggerated height
             map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
-    
+
+
             // add a sky layer that will show when the map is highly pitched
             map.addLayer({
                 'id': 'sky',
@@ -469,6 +470,31 @@
                 }
             });
         };
+
+        map.addSource('nativeland', {
+            'type': 'vector',
+            'url': 'mapbox://nativeland.cjh3mywgg04aaahpidhgio50e-9ctzy'
+        });
+        map.addLayer(
+            {
+                "id": "native-land",
+                "type": "symbol",
+                "source": "nativeland",
+                "source-layer": "Territories",
+                "layout": {
+                    "text-field": ["to-string", ["get", "Name"]],
+                    "text-font": ["Open Sans SemiBold", "Arial Unicode MS Regular"],
+                    "text-size": 10
+                },
+                "paint": {
+                    "text-color": "#ffffff",
+                    "text-halo-color": "hsl(0, 99%, 1%)",
+                    "text-halo-width": 1,
+                    "text-opacity": 0
+                }
+            },
+            'dd-workareas' // Arrange our new layer beneath this layer
+        );
     
         // setup the instance, pass callback functions
         scroller

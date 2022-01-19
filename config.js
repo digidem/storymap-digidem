@@ -28,6 +28,10 @@ var config = {
             callback: "",
             onChapterEnter: [
                 {
+                    layer: "country-label",
+                    opacity: 0,
+                },                
+                {
                     layer: "state-label",
                     opacity: 0,
                 },
@@ -50,7 +54,11 @@ var config = {
                 {
                     layer: 'admin-0-boundary',
                     opacity: 0
-                },      
+                },  
+                {
+                    layer: 'native-land',
+                    opacity: 1
+                }    
 			],
             onChapterExit: [
             ]
@@ -73,6 +81,10 @@ var config = {
             rotateAnimation: false,
             callback: "",
             onChapterEnter: [
+                {
+                    layer: "country-label",
+                    opacity: 1,
+                },
                 {
                     layer: "state-label",
                     opacity: 1,
@@ -124,7 +136,11 @@ var config = {
                 {
                     layer: "eca-buffer",
                     opacity: 0,
-                }
+                },  
+                {
+                    layer: 'native-land',
+                    opacity: 0
+                }    
 			],
             onChapterExit: [
             ]
