@@ -31,6 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8acaa2e00f.js" crossorigin="anonymous"></script>
     <style>
         body {
@@ -155,6 +156,40 @@
             display: none; 
         }
 
+        .legend {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            color: #444;
+            background-color: #fafafa;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            padding: 10px;
+            display: none;
+            z-index: 1;
+            max-width: 350px;
+        }
+        .legend img { 
+            width: 25px;
+            margin-right: 10px;
+        }
+        .legend h3 {
+            margin: 0 0 10px;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+        }
+        .legend div {
+            vertical-align: center;
+        }
+        .legend div #block {
+            display: inline-block;
+            height: 20px;
+            width: 30px;
+            margin-right: 5px;
+        }
+        .legend div #text {
+            vertical-align: top;
+        }
+
         @media (max-width: 750px) {
             #features {
                 width: 90vw;
@@ -199,6 +234,38 @@
 <body>
 
 <div id="map"></div>
+
+<div id='page1legend' class='legend'>
+    <div><img src="images/mapeo-icon-circle.png"><span id="text">Mapeo actively in use</span></div>
+</div>
+<div id='page2legend' class='legend'>
+    <div><span id="text">TBD</span></div>
+</div>
+<div id='page4legend' class='legend'>
+    <div>
+        <img src="images/castle-15.png"><span id="text">Control station</span><br>
+        <span id="block" style='background-color: #b5f231; opacity: 0.5;'></span><span id="text">Amarakaeri Communal Reserve</span><br>
+        <span id="block" style='background-color: #f1a241; opacity: 0.5;'></span><span id="text">Community area</span><br>
+        <span id="block" style='background-color: #3adf11; opacity: 0.5;'></span><span id="text">Buffer zone</span><br>
+        <span id="block" style='background-color: #fd1717; opacity: 0.25;'></span><span id="text">Mining concession</span>
+    </div>
+</div>
+<div id='page6legend' class='legend'>
+    <div>
+        <span id="block" style='background-color: #f7b322; opacity: 0.5;'></span><span id="text">Chepkitale Community Lands</span><br>
+        <span id="block" style='background-color: #1b9d2a; opacity: 0.5;'></span><span id="text">Mount Elgon National Park</span><br>
+        <span id="block" style='background-color: #55f538; opacity: 0.5;'></span><span id="text">Forest reserves</span><br>
+        <span id="block" style='background-color: #ee4444; opacity: 0.5;'></span><span id="text">Encroachment area</span><br>
+    </div>
+</div>
+<div id='page9legend' class='legend'>
+    <div>
+        <span id="block" style='background-color: #c3beb1; opacity: 0.5;'></span><span id="text">Haldimand Tract</span><br>
+        <span id="block" style='background-color: #f39b16; opacity: 0.5;'></span><span id="text">Six Nations Reserve of the Grand River</span><br>
+    </div>
+</div>
+
+    
 <div id="story"></div>
 <script src="./config.js"></script>
 <script>
@@ -412,6 +479,28 @@
         })
         .onStepEnter(response => {
             var chapter = config.chapters.find(chap => chap.id === response.element.id);
+            var chapterId = chapter.id;   
+
+            switch(chapterId) {
+                case "page1" : 
+                    $("#page1legend").show(); $("#page2legend").hide(); $("#page4legend").hide(); $("#page6legend").hide(); $("#page9legend").hide();                 
+                    break;
+                case "page2" : 
+                    $("#page1legend").hide(); $("#page2legend").show(); $("#page4legend").hide(); $("#page6legend").hide(); $("#page9legend").hide();                 
+                    break;  
+                case "page4" : 
+                    $("#page1legend").hide(); $("#page2legend").hide(); $("#page4legend").show(); $("#page6legend").hide(); $("#page9legend").hide();                 
+                    break;
+                case "page6" : 
+                    $("#page1legend").hide(); $("#page2legend").hide(); $("#page4legend").hide(); $("#page6legend").show(); $("#page9legend").hide();                 
+                    break;
+                case "page9" : 
+                    $("#page1legend").hide(); $("#page2legend").hide(); $("#page4legend").hide(); $("#page6legend").hide(); $("#page9legend").show();                 
+                    break;              
+                default:
+                    $("#page1legend").hide(); $("#page2legend").hide(); $("#page4legend").hide(); $("#page6legend").hide(); $("#page9legend").hide();  
+            }
+
             response.element.classList.add('active');
             map[chapter.mapAnimation || 'flyTo'](chapter.location);
             if (config.showMarkers) {

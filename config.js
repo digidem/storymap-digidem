@@ -211,7 +211,7 @@ var config = {
                 },
                 {
                     layer: 'ogiek-label-1',
-                    opacity: 1
+                    opacity: 0
                 },
                 {
                     layer: 'ogiek-label-2',
