@@ -3708,7 +3708,7 @@
                 chapter.onChapterEnter.forEach(setLayerOpacity);
             }
             if (chapter.callback == "waoMap") {
-                let arr = Object.keys(map["style"]["_layers"]).length;
+                /* let arr = Object.keys(map["style"]["_layers"]).length;
                 for (i = 0; i < arr; i++) {
                     let layerName = Object.keys(map["style"]["_layers"])[i];
                     if ((map["style"]["_layers"][layerName].source == "aliya")) {
@@ -3719,20 +3719,20 @@
                                 if (!(layerLayout["_values"]["icon-image"] == undefined)) {
                                     let iconName = layerLayout["_values"]["icon-image"]["value"];
                                     if (!(iconName == undefined)) {
-                                        /* import Image from "wao-icons/wao-comunidad-33px.png";
+                                        import Image from "wao-icons/wao-comunidad-33px.png";
                                         const image = new Image(33, 33);
                                         image.src = Image;
                                         import image from "wao-icons/wao-comunidad-33px.png";
                                         map.loadImage(image, (error, image) => {
                                             if (error) throw error;
                                             map.addImage(iconName, image);
-                                        }); */
+                                        });
                                     }
                                 }
                             }
                         }
                     }
-                };
+                }; */
             }
             if (chapter.rotateAnimation) {
                 map.once('moveend', function() {
