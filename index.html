@@ -139,6 +139,15 @@
             width: 100%;
         }
 
+        .step .caption {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .step .returntop {
+            font-size: 1.2em;
+        }
+
 		.step div p {
             font-family: 'Roboto', 'Open Sans', 'Verdana', sans-serif;
 			font-size: 1.1rem;
@@ -325,9 +334,16 @@
             chapter.appendChild(image);
         }
 
+        if (record.caption) {
+            caption = document.createElement('p');
+            caption.setAttribute("class", "caption");
+            caption.innerHTML = '<em>'+ record.caption + '</em>';
+            chapter.appendChild(caption);
+        }
+
         if (record.author) {
             author = document.createElement('p');
-            author.innerHTML = '<em>'+ record.author + '</em>';
+            author.innerHTML = '<strong>By '+ record.author + '</strong>';
             chapter.appendChild(author);
         }
     
@@ -335,9 +351,15 @@
             var story = document.createElement('p');
             story.innerHTML = record.description;
             chapter.appendChild(story);
-            var returntotop = document.createElement('p');
-            returntotop.innerHTML = '<a href="#header">Back to top</a>';
-            chapter.appendChild(returntotop);
+            if (record.website) {
+              var website = document.createElement('p');
+              website.innerHTML = `» ${record.website}`;
+              chapter.appendChild(website);  
+            }
+            var returnTop = document.createElement('p');
+            returnTop.setAttribute("class", "returntop");
+            returnTop.innerHTML = '<a href="#header">Back to top</a>';
+            chapter.appendChild(returnTop);
         }
         
         // Add legend to each
@@ -370,12 +392,19 @@
     var footer = document.createElement('div');
 
     if (config.bookmarks) {
-		var bookmarksText = document.createElement('h5');
-		bookmarksText.innerHTML = config.bookmarks;
-		header.appendChild(bookmarksText);
-		var footerText = document.createElement('p');
-		footerText.innerHTML = config.bookmarks;
-		footer.appendChild(footerText);
+        var bookmarksText = "<strong>Bookmarks</strong>: ";
+        for (i = 0; i < config.chapters.length; i++) {
+            bookmarksText += `<a href=#${config.chapters[i].id}>${config.chapters[i].title}</a>`;
+            if (i != config.chapters.length - 1) {
+                bookmarksText += " | ";
+            }
+        }
+		var headerBookmarks = document.createElement('h5');
+		headerBookmarks.innerHTML = bookmarksText;
+		header.appendChild(headerBookmarks);
+		var footerBookmarks = document.createElement('p');
+		footerBookmarks.innerHTML = bookmarksText;
+		footer.appendChild(footerBookmarks);
     }
 	
 	if (config.mobileview) {
