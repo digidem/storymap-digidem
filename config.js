@@ -47,7 +47,7 @@ var config = {
                 {
                     layer: "settlement-subdivision-label",
                     opacity: 0,
-                },                
+                },
                 {
                     layer: 'admin-0-boundary',
                     opacity: 0
@@ -55,30 +55,7 @@ var config = {
                 {
                     layer: 'native-land',
                     opacity: 1
-                }    
-			],
-            onChapterExit: [
-            ]
-        },
-		        {
-            id: 'page1',
-            alignment: "left",
-            hidden: false,
-            title: 'Territory mapping with the Waorani (Ecuador)',
-            image: 'images/waorani.jpg',
-            author: 'Aliya Ryan, Digital Democracy',
-            legend: '<span id="text">TBD</span>',
-            description: '<em>"Waorani Territory is our home, and it is full of life, but it is a fragile and threatened life which we will always fight to protect. The State comes and shows us maps but we don\'t recognize them: their maps are empty, but our territory is full and alive... Making the maps has built unity and solidarity amongst our people. And they are an opportunity to tell the world our story, ourselves."</em> Oswando Nenquimo<br><br>The Waorani people live in the heart of the Ecaudorian Amazon. In 2015 they started a territory mapping project to defend their lands, culture and the livelihoods of their children from oil operations and other extractive activities. The Waorani mapping team, lead by Oswando Nenquimo, worked alongside Alianza Ceibo and Amazon Frontlines, and partnered with Digital Democracy to codevelop Mapeo. They used Mapeo throughout the 3 years of their mapping project, and are now using it as part of ongoing territory monitoring and defense work. The Waorani used the maps they made of the 22 communities in the Pastaza region in a courtcase against the Ecuadorian Government in 2019, in opposition to a new oil concession. The judges\' landmark ruling agreed that the concession had been created without a due consultation process, and xxxx acres of the Waorani\'s rainforest home was protected from devastation.',
-            location: {
-                center: [-76.38612, -1.15350], 
-				zoom: 8.5,
-				pitch: 0.00,
-				bearing: 0.00,
-            },
-            mapAnimation: "flyTo",
-            rotateAnimation: false,
-            callback: "",
-            onChapterEnter: [
+                },
                 {
                     layer: "dd-workareas",
                     opacity: 1,
@@ -143,32 +120,6 @@ var config = {
                     layer: "new-zona animales",
                     opacity: 0,
                 },
-                    layer: 'native-land',
-                    opacity: 0
-                }    
-			],
-            onChapterExit: [
-            ]
-        },
-		        {
-            id: 'page2',
-            alignment: "left",
-            hidden: false,
-            title: 'Monitoring with ECA-Amarakaeri (Peru)',
-            image: 'images/eca.jpg',
-            author: 'Mar Cártro, Digital Democracy',
-            legend: '<img src="images/castle-15.png"><span id="text">Control station</span><br>            <span id="block" style="background-color: #b5f231; opacity: 0.5;"></span><span id="text">Amarakaeri Communal Reserve</span><br><span id="block" style="background-color: #3adf11; opacity: 0.5;"></span><span id="text">Buffer zone</span><br><span id="block" style="background-color: #f1a241; opacity: 0.5;"></span><span id="text">Community area</span><br><span id="block" style="background-color: #fd1717; opacity: 0.5;"></span><span id="text">Mining concession</span>',
-            description: 'In the Peruvian Madre de Dios department, the Harakbut, Matsiguenka, and Yine Peoples have monitored and protected their ancestral territories for centuries and consider themselves as owners and guards of this part of the Amazon. In 2002, following 18 years of constant struggle, part of their ancestral territory was recognized as a natural protected area, called the Amarakaeri Communal Reserve. Since 2006, the reserve is co-managed between ten Indigenous communities (organized by the ECA Amarakaeri organization) and the National Service of Protected Areas (SERNANP), with the support of two Indigenous organizations (FENAMAD and COHARYIMA). Community guards, park rangers and technicians use Mapeo, together with other state-of-the-art Technology, to protect their ancestral forests from illegal mining and logging. Their exemplary efforts have been recognized by the Equator Prize in 2019. Moreover, the IUCN included the Amarakaeri Communal Reserve in their Green list because of its high conservation status.',
-            location: {
-                center: [-71.284, -12.768], 
-				zoom: 9,
-				pitch: 0.00,
-				bearing: 0.00,
-            },
-            mapAnimation: "flyTo",
-            rotateAnimation: false,
-            callback: "",
-            onChapterEnter: [
                 {
                     layer: "new-zona rastrojo",
                     opacity: 0,
@@ -548,21 +499,19 @@ var config = {
                 {
                     layer: "wao-comunidad-centro-12-18-61njjo copy",
                     opacity: 0,
-                },
-
-
-
+                },   
 			],
             onChapterExit: [
             ]
         },
 		        {
-            id: 'page2',
+            id: 'page1',
             alignment: "left",
             hidden: false,
             title: 'Territory mapping with the Waorani (Ecuador)',
             image: 'images/waorani.jpg',
             author: 'Aliya Ryan, Digital Democracy',
+            legend: '<span id="text">TBD</span>',
             description: '<em>"Waorani Territory is our home, and it is full of life, but it is a fragile and threatened life which we will always fight to protect. The State comes and shows us maps but we don\'t recognize them: their maps are empty, but our territory is full and alive... Making the maps has built unity and solidarity amongst our people. And they are an opportunity to tell the world our story, ourselves."</em> Oswando Nenquimo<br><br>The Waorani people live in the heart of the Ecaudorian Amazon. In 2015 they started a territory mapping project to defend their lands, culture and the livelihoods of their children from oil operations and other extractive activities. The Waorani mapping team, lead by Oswando Nenquimo, worked alongside Alianza Ceibo and Amazon Frontlines, and partnered with Digital Democracy to codevelop Mapeo. They used Mapeo throughout the 3 years of their mapping project, and are now using it as part of ongoing territory monitoring and defense work. The Waorani used the maps they made of the 22 communities in the Pastaza region in a courtcase against the Ecuadorian Government in 2019, in opposition to a new oil concession. The judges\' landmark ruling agreed that the concession had been created without a due consultation process, and xxxx acres of the Waorani\'s rainforest home was protected from devastation.<br><br><a href="https://www.amazonfrontlines.org/who-should-decide/" target="_blank">Who Should Decide campaign featuring the Waorani map</a>',
             location: {
                 center: [-77.28717, -1.22521], 
@@ -572,7 +521,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
-            callback: "waoMap",
+            callback: "",
             onChapterEnter: [
                 {
                     layer: "country-label",
@@ -1079,12 +1028,13 @@ var config = {
             ]
         },
 		        {
-            id: 'page4',
+            id: 'page2',
             alignment: "left",
             hidden: false,
             title: 'Monitoring with ECA-Amarakaeri (Peru)',
             image: 'images/eca.jpg',
             author: 'Mar Cártro, Digital Democracy',
+            legend: '<img src="images/castle-15.png"><span id="text">Control station</span><br>            <span id="block" style="background-color: #b5f231; opacity: 0.5;"></span><span id="text">Amarakaeri Communal Reserve</span><br><span id="block" style="background-color: #3adf11; opacity: 0.5;"></span><span id="text">Buffer zone</span><br><span id="block" style="background-color: #f1a241; opacity: 0.5;"></span><span id="text">Community area</span><br><span id="block" style="background-color: #fd1717; opacity: 0.5;"></span><span id="text">Mining concession</span>',
             description: 'In the Peruvian Madre de Dios department, the Harakbut, Matsiguenka, and Yine Peoples have monitored and protected their ancestral territories for centuries and consider themselves as owners and guards of this part of the Amazon. In 2002, following 18 years of constant struggle, part of their ancestral territory was recognized as a natural protected area, called the Amarakaeri Communal Reserve. Since 2006, the reserve is co-managed between ten Indigenous communities (organized by the ECA Amarakaeri organization) and the National Service of Protected Areas (SERNANP), with the support of two Indigenous organizations (FENAMAD and COHARYIMA). Community guards, park rangers and technicians use Mapeo, together with other state-of-the-art Technology, to protect their ancestral forests from illegal mining and logging. Their exemplary efforts have been recognized by the Equator Prize in 2019. Moreover, the IUCN included the Amarakaeri Communal Reserve in their Green list because of its high conservation status.<br><br><a href="https://amarakaeri.org/" target="_blank">ECA Amarakaeri website</a>',
             location: {
                 center: [-71.284, -12.768], 
@@ -1675,7 +1625,7 @@ var config = {
             image: 'images/ohneganos.jpg',
             author: 'Rudo Kemper, Digital Democracy',
             legend: '<span id="block" style="background-color: #c3beb1; opacity: 0.5;"></span><span id="text">Haldimand Tract</span><br><span id="block" style="background-color: #f39b16; opacity: 0.5;"></span><span id="text">Six Nations Reserve of the Grand River</span><br>',
-            description: 'Six Nations is the largest First Nations reserve in Canada. It is the only reserve in North America that has representatives of all six Haudenosaunee nations living together. These nations are the Mohawk, Cayuga, Onondaga, Oneida, Seneca and Tuscarora. Some Lenape (formerly known as Delaware) also live in the territory. The Haudenosaunee (or Iroquois) people originally inhabited a much larger area stretching across the United Stated and Canada, and were legally granted a large tract of land by the French via the 1784 Haldimand Treaty; this was later taken away, and Six Nations represents only 5% of that area. The organization Ohneganos is an Indigenous water research program led by McMaster University professor Dr. Dawn Martin Hill, and are working to co-create Indigenous water quality tools, and mixed-method tools for collecting and training in Indigenous ecological knowledge.<br><br>As part of the Indigenous ecological knowledge research program of Ohneganos, Digital Democracy is providing programmatic support to Ohneganos in using Mapeo to collect Indigenous ecological knowledge across Six Nations, and recording place-based oral histories about important Haudenosaunee cultural sites across the lands. The Ohneganos team, together with a local mapping coordinator, will be using both Mapeo Mobile and Desktop to gather and organize data, and will be mapping and visualizing the geospatial data and stories using the open-source application Terrastories. This project represents the first pilot in testing out a Mapeo-to-Terrastories workflow.',
+            description: 'Six Nations is the largest First Nations reserve in Canada. It is the only reserve in North America that has representatives of all six Haudenosaunee nations living together. These nations are the Mohawk, Cayuga, Onondaga, Oneida, Seneca and Tuscarora. Some Lenape (formerly known as Delaware) also live in the territory. The Haudenosaunee (or Iroquois) people originally inhabited a much larger area stretching across the United Stated and Canada, and were legally granted a large tract of land by the French via the 1784 Haldimand Treaty; this was later taken away, and Six Nations represents only 5% of that area. The organization Ohneganos is an Indigenous water research program led by McMaster University professor Dr. Dawn Martin Hill, and are working to co-create Indigenous water quality tools, and mixed-method tools for collecting and training in Indigenous ecological knowledge.<br><br><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube-nocookie.com/embed/cybEjHDFKAA?controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture"></iframe></div><br><br>As part of the Indigenous ecological knowledge research program of Ohneganos, Digital Democracy is providing programmatic support to Ohneganos in using Mapeo to collect Indigenous ecological knowledge across Six Nations, and recording place-based oral histories about important Haudenosaunee cultural sites across the lands. The Ohneganos team, together with a local mapping coordinator, will be using both Mapeo Mobile and Desktop to gather and organize data, and will be mapping and visualizing the geospatial data and stories using the open-source application Terrastories. This project represents the first pilot in testing out a Mapeo-to-Terrastories workflow.<br><br><a href="https://www.ohneganos.com/" target="_blank">Ohneganos website</a>',
             location: {
                 center: [-79.31420, 43.61287], 
 				zoom: 6.5,
