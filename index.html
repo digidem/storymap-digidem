@@ -3823,8 +3823,10 @@
             }
             if (chapter.callback == "waoMap") {
                 map.setPaintProperty('background', "background-color", "#ebf9dc");
+                map.setPaintProperty('satellite', "raster-opacity", ["interpolate", ["linear"],["zoom"],12,1,13,0]);
             } else {
                 map.setPaintProperty('background', "background-color", "#000000");
+                map.setPaintProperty('satellite', "raster-opacity", 1);
                 /* let arr = Object.keys(map["style"]["_layers"]).length;
                 for (i = 0; i < arr; i++) {
                     let layerName = Object.keys(map["style"]["_layers"])[i];

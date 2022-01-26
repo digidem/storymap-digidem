@@ -61,10 +61,91 @@ var config = {
                 {
                     layer: "dd-workareas",
                     opacity: 1,
+                }
+			],
+            onChapterExit: [
+            ]
+        },
+		        {
+            id: 'page1',
+            alignment: "left",
+            hidden: false,
+            title: 'Territory mapping with the Waorani (Ecuador)',
+            image: 'images/waorani.jpg',
+            caption: '',
+            author: 'Aliya Ryan, Digital Democracy',
+            website: '<a href="https://www.amazonfrontlines.org/who-should-decide/" target="_blank">Who Should Decide campaign featuring the Waorani map</a>',
+            legend: '<span id="text">TBD</span>',
+            description: '<em>"Waorani Territory is our home, and it is full of life, but it is a fragile and threatened life which we will always fight to protect. The State comes and shows us maps but we don\'t recognize them: their maps are empty, but our territory is full and alive... Making the maps has built unity and solidarity amongst our people. And they are an opportunity to tell the world our story, ourselves."</em> Oswando Nenquimo<br><br>The Waorani people live in the heart of the Ecaudorian Amazon. In 2015 they started a territory mapping project to defend their lands, culture and the livelihoods of their children from oil operations and other extractive activities. The Waorani mapping team, lead by Oswando Nenquimo, worked alongside Alianza Ceibo and Amazon Frontlines, and partnered with Digital Democracy to codevelop Mapeo. They used Mapeo throughout the 3 years of their mapping project, and are now using it as part of ongoing territory monitoring and defense work. The Waorani used the maps they made of the 22 communities in the Pastaza region in a courtcase against the Ecuadorian Government in 2019, in opposition to a new oil concession. The judges\' landmark ruling agreed that the concession had been created without a due consultation process, and xxxx acres of the Waorani\'s rainforest home was protected from devastation.',
+            location: {
+                center: [-77.28717, -1.22521], 
+				zoom: 13.5,
+				pitch: 0.00,
+				bearing: 0.00,
+            },
+            mapAnimation: "flyTo",
+            rotateAnimation: false,
+            callback: "waoMap",
+            onChapterEnter: [
+                {
+                    layer: "country-label",
+                    opacity: 1,
+                },
+                {
+                    layer: "state-label",
+                    opacity: 1,
+                },
+                {
+                    layer: "settlement-major-label",
+                    opacity: 1,
+                },
+                {
+                    layer: "settlement-minor-label",
+                    opacity: 1,
+                },
+                {
+                    layer: "settlement-subdivision-label",
+                    opacity: 1,
+                },
+                {
+                    layer: 'admin-0-boundary',
+                    opacity: 1
+                },          
+                {
+                    layer: "dd-workareas",
+                    opacity: 0,
+                },
+                {
+                    layer: "eca-reserve-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "eca-community-labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "eca-puestos",
+                    opacity: 0,
+                },
+                {
+                    layer: "eca-minero",
+                    opacity: 0,
+                },
+                {
+                    layer: "eca-reserve",
+                    opacity: 0,
+                },
+                {
+                    layer: "eca-community",
+                    opacity: 0,
+                },
+                {
+                    layer: "eca-buffer",
+                    opacity: 0,
                 },  
                 {
-                    layer: "satellite",
-                    opacity: 1,
+                    layer: 'native-land',
+                    opacity: 0
                 },
                 ,
                 { 
@@ -507,95 +588,6 @@ var config = {
                     layer: "wao-comunidad-centro-12-18-61njjo copy",
                     opacity: 1,
                 },
-			],
-            onChapterExit: [
-            ]
-        },
-		        {
-            id: 'page1',
-            alignment: "left",
-            hidden: false,
-            title: 'Territory mapping with the Waorani (Ecuador)',
-            image: 'images/waorani.jpg',
-            caption: '',
-            author: 'Aliya Ryan, Digital Democracy',
-            website: '<a href="https://www.amazonfrontlines.org/who-should-decide/" target="_blank">Who Should Decide campaign featuring the Waorani map</a>',
-            legend: '<span id="text">TBD</span>',
-            description: '<em>"Waorani Territory is our home, and it is full of life, but it is a fragile and threatened life which we will always fight to protect. The State comes and shows us maps but we don\'t recognize them: their maps are empty, but our territory is full and alive... Making the maps has built unity and solidarity amongst our people. And they are an opportunity to tell the world our story, ourselves."</em> Oswando Nenquimo<br><br>The Waorani people live in the heart of the Ecaudorian Amazon. In 2015 they started a territory mapping project to defend their lands, culture and the livelihoods of their children from oil operations and other extractive activities. The Waorani mapping team, lead by Oswando Nenquimo, worked alongside Alianza Ceibo and Amazon Frontlines, and partnered with Digital Democracy to codevelop Mapeo. They used Mapeo throughout the 3 years of their mapping project, and are now using it as part of ongoing territory monitoring and defense work. The Waorani used the maps they made of the 22 communities in the Pastaza region in a courtcase against the Ecuadorian Government in 2019, in opposition to a new oil concession. The judges\' landmark ruling agreed that the concession had been created without a due consultation process, and xxxx acres of the Waorani\'s rainforest home was protected from devastation.',
-            location: {
-                center: [-77.28717, -1.22521], 
-				zoom: 13.5,
-				pitch: 0.00,
-				bearing: 0.00,
-            },
-            mapAnimation: "flyTo",
-            rotateAnimation: false,
-            callback: "waoMap",
-            onChapterEnter: [
-                {
-                    layer: "country-label",
-                    opacity: 1,
-                },
-                {
-                    layer: "state-label",
-                    opacity: 1,
-                },
-                {
-                    layer: "settlement-major-label",
-                    opacity: 1,
-                },
-                {
-                    layer: "settlement-minor-label",
-                    opacity: 1,
-                },
-                {
-                    layer: "settlement-subdivision-label",
-                    opacity: 1,
-                },
-                {
-                    layer: 'admin-0-boundary',
-                    opacity: 1
-                },          
-                {
-                    layer: "dd-workareas",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-reserve-label",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-community-labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-puestos",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-minero",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-reserve",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-community",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-buffer",
-                    opacity: 0,
-                },  
-                {
-                    layer: 'native-land',
-                    opacity: 0
-                },
-                {
-                    layer: "satellite",
-                    opacity: 0,
-                }   
 			],
             onChapterExit: [
             ]
@@ -1092,11 +1084,7 @@ var config = {
                 {
                     layer: "wao-comunidad-centro-12-18-61njjo copy",
                     opacity: 0,
-                },               
-                {
-                    layer: "satellite",
-                    opacity: 1,
-                }    
+                }  
 
 			],
             onChapterExit: [
