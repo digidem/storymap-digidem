@@ -234,37 +234,6 @@
 <body>
 
 <div id="map"></div>
-
-<div id='page1legend' class='legend'>
-    <div><img src="images/mapeo-icon-circle.png"><span id="text" style="vertical-align: super;">Mapeo actively in use</span></div>
-</div>
-<div id='page2legend' class='legend'>
-    <div><span id="text">TBD</span></div>
-</div>
-<div id='page4legend' class='legend'>
-    <div>
-        <img src="images/castle-15.png"><span id="text">Control station</span><br>
-        <span id="block" style='background-color: #b5f231; opacity: 0.5;'></span><span id="text">Amarakaeri Communal Reserve</span><br>
-        <span id="block" style='background-color: #3adf11; opacity: 0.5;'></span><span id="text">Buffer zone</span><br>
-        <span id="block" style='background-color: #f1a241; opacity: 0.5;'></span><span id="text">Community area</span><br>
-        <span id="block" style='background-color: #fd1717; opacity: 0.5;'></span><span id="text">Mining concession</span>
-    </div>
-</div>
-<div id='page6legend' class='legend'>
-    <div>
-        <span id="block" style='background-color: #f7b322; opacity: 0.5;'></span><span id="text">Chepkitale Community Lands</span><br>
-        <span id="block" style='background-color: #1b9d2a; opacity: 0.5;'></span><span id="text">Mount Elgon National Park</span><br>
-        <span id="block" style='background-color: #55f538; opacity: 0.5;'></span><span id="text">Forest reserves</span><br>
-        <span id="block" style='background-color: #ee4444; opacity: 0.5;'></span><span id="text">Encroachment area</span><br>
-    </div>
-</div>
-<div id='page9legend' class='legend'>
-    <div>
-        <span id="block" style='background-color: #c3beb1; opacity: 0.5;'></span><span id="text">Haldimand Tract</span><br>
-        <span id="block" style='background-color: #f39b16; opacity: 0.5;'></span><span id="text">Six Nations Reserve of the Grand River</span><br>
-    </div>
-</div>
-
     
 <div id="story"></div>
 <script src="./config.js"></script>
@@ -370,6 +339,16 @@
             returntotop.innerHTML = '<a href="#header">Back to top</a>';
             chapter.appendChild(returntotop);
         }
+        
+        // Add legend to each
+
+        if (record.legend) {
+            var legend = document.createElement('div');
+            legend.setAttribute("class", "legend");
+            legend.setAttribute("id", (record.id + "legend"));
+            legend.innerHTML = '<div>' + record.legend + '</div>';
+            document.body.append(legend);
+        }
 
         container.setAttribute('id', record.id);
         container.classList.add('step');
@@ -389,7 +368,6 @@
     story.appendChild(features);
     
     var footer = document.createElement('div');
-    
 
     if (config.bookmarks) {
 		var bookmarksText = document.createElement('h5');
@@ -506,27 +484,24 @@
         })
         .onStepEnter(response => {
             var chapter = config.chapters.find(chap => chap.id === response.element.id);
-            var chapterId = chapter.id;   
+ 
+            // Legends
 
-            switch(chapterId) {
-                case "page1" : 
-                    $("#page1legend").show(); $("#page2legend").hide(); $("#page4legend").hide(); $("#page6legend").hide(); $("#page9legend").hide();                 
-                    break;
-                case "page2" : 
-                    $("#page1legend").hide(); $("#page2legend").show(); $("#page4legend").hide(); $("#page6legend").hide(); $("#page9legend").hide();                 
-                    break;  
-                case "page4" : 
-                    $("#page1legend").hide(); $("#page2legend").hide(); $("#page4legend").show(); $("#page6legend").hide(); $("#page9legend").hide();                 
-                    break;
-                case "page6" : 
-                    $("#page1legend").hide(); $("#page2legend").hide(); $("#page4legend").hide(); $("#page6legend").show(); $("#page9legend").hide();                 
-                    break;
-                case "page9" : 
-                    $("#page1legend").hide(); $("#page2legend").hide(); $("#page4legend").hide(); $("#page6legend").hide(); $("#page9legend").show();                 
-                    break;              
-                default:
-                    $("#page1legend").hide(); $("#page2legend").hide(); $("#page4legend").hide(); $("#page6legend").hide(); $("#page9legend").hide();  
-            }
+            if (chapter.legend) {
+                for (i = 0; i < config.chapters.length; i++) {
+                    for (j = 0; j < config.chapters.length; j++) {
+                        if (("page" + j) == chapter.id) {
+                            $("#page" + j + "legend").show();
+                        } else {
+                            $("#page" + j + "legend").hide();
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < config.chapters.length; i++) {
+                    $("#page" + i + "legend").hide();
+                }
+            };
 
             response.element.classList.add('active');
             map[chapter.mapAnimation || 'flyTo'](chapter.location);
