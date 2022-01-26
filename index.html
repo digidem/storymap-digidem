@@ -337,7 +337,7 @@
         if (record.caption) {
             caption = document.createElement('p');
             caption.setAttribute("class", "caption");
-            caption.innerHTML = '<em>'+ record.caption + '</em>';
+            caption.innerHTML = `<em>${record.caption}</em>`;
             chapter.appendChild(caption);
         }
 
@@ -3712,6 +3712,9 @@
                 chapter.onChapterEnter.forEach(setLayerOpacity);
             }
             if (chapter.callback == "waoMap") {
+                map.setPaintProperty('background', "background-color", "#ebf9dc");
+            } else {
+                map.setPaintProperty('background', "background-color", "#000000");
                 /* let arr = Object.keys(map["style"]["_layers"]).length;
                 for (i = 0; i < arr; i++) {
                     let layerName = Object.keys(map["style"]["_layers"])[i];

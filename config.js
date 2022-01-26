@@ -31,10 +31,6 @@ var config = {
             callback: "",
             onChapterEnter: [
                 {
-                    layer: "background-wao",
-                    opacity: 1,
-                },    
-                {
                     layer: "country-label",
                     opacity: 0,
                 },                
@@ -509,15 +505,7 @@ var config = {
                 {
                     layer: "satellite",
                     opacity: 1,
-                },
-                {
-                    layer: "background",
-                    opacity: 1,
-                },
-                {
-                    layer: "background-wao",
-                    opacity: 0,
-                }     
+                }  
 			],
             onChapterExit: [
             ]
@@ -541,7 +529,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
-            callback: "",
+            callback: "waoMap",
             onChapterEnter: [
                 {
                     layer: "country-label",
@@ -1046,15 +1034,7 @@ var config = {
                 {
                     layer: "satellite",
                     opacity: 0,
-                },
-                {
-                    layer: "background",
-                    opacity: 0,
-                },
-                {
-                    layer: "background-wao",
-                    opacity: 1,
-                }        
+                }   
 			],
             onChapterExit: [
             ]
@@ -1555,15 +1535,7 @@ var config = {
                 {
                     layer: "satellite",
                     opacity: 1,
-                },
-                {
-                    layer: "background",
-                    opacity: 1,
-                },
-                {
-                    layer: "background-wao",
-                    opacity: 0,
-                }     
+                }    
 
 			],
             onChapterExit: [
