@@ -340,17 +340,16 @@
             caption.innerHTML = `<em>${record.caption}</em>`;
             chapter.appendChild(caption);
         }
-
-        if (record.author) {
-            author = document.createElement('p');
-            author.innerHTML = '<strong>By '+ record.author + '</strong>';
-            chapter.appendChild(author);
-        }
     
         if (record.description) {
             var story = document.createElement('p');
             story.innerHTML = record.description;
             chapter.appendChild(story);
+            if (record.author) {
+                author = document.createElement('p');
+                author.innerHTML = '<strong>By '+ record.author + '</strong>';
+                chapter.appendChild(author);
+            }     
             if (record.website) {
               var website = document.createElement('p');
               website.innerHTML = `» ${record.website}`;

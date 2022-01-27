@@ -72,7 +72,7 @@ var config = {
             hidden: false,
             title: 'Territory mapping with the Waorani (Ecuador)',
             image: 'images/waorani.jpg',
-            caption: '',
+            caption: 'Pava Yeti from Kiwaro with the community’s completed territory map, Dd 2017.',
             author: 'Aliya Ryan, Digital Democracy',
             website: '<a href="https://www.amazonfrontlines.org/who-should-decide/" target="_blank">Who Should Decide campaign featuring the Waorani map</a>',
             legend: '<span id="text">TBD</span>',
