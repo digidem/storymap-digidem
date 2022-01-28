@@ -4,6 +4,7 @@ var config = {
     showMarkers: false,
     theme: 'dark',
     use3dTerrain: false,
+    projection: 'equirectangular',
     bookmarks: true,
     title: 'Technology in Solidarity with Frontline Technologies',
     logo: 'images/Digital Democracy.png',
@@ -21,7 +22,7 @@ var config = {
             legend: '<img src="images/mapeo-icon-circle.png"><span id="text" style="vertical-align: super;">Mapeo actively in use</span>',
             description: 'Digital Democracy partners with marginalized communities worldwide to build tools to defend their  environmental and human rights. We envision a healthy, vibrant planet where all people are able to participate in the decisions that govern their lives.<br><br>Our work lies in deep, trusting relationships with local partners. Digital Democracy supports communities who are working to defend their human and environmental rights, but who lack the tools to do so. Our local partners represent marginalized communities worldwide, including Indigenous Peoples and ethnic minorities, whose human rights are most severely impacted by environmental abuse. We train partners to use basic digital tools to gather, share, and manage information about environmental and human rights infractions.<br><br><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube-nocookie.com/embed/xw7SyRCOtEc?controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture"></iframe></div><br><br>Based on years of work with local communities, Digital Democracy observed persistent technological gaps that weren’t being met by corporate technologies. In 2013 we began to co-create tech solutions with our partners in the Amazon to develop a tool that would meet their needs, resulting in Mapeo, an open-source tool for frontline defenders.',
                 location: {
-                center: [180, 17], 
+                center: [170, 0], 
 				zoom: 1.75,
 				pitch: 0.00,
 				bearing: 0.00,
