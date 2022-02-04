@@ -3859,22 +3859,24 @@
                 chapter.onChapterEnter.forEach(setLayerOpacity);
             }
 
-
-            if (chapter.callback == "workAreas") {
+            if (chapter.mapInteractive) {
                 map.addControl(navigation);
                 map.dragPan.enable();
                 map.doubleClickZoom.enable();
-                map.getCanvas().style.cursor = 'grab';
-                map.on('mouseenter', 'dd-workareas', workAreasPopup);
-                map.on('mouseleave', 'dd-workareas', workAreasPopupOff);
-            
+                map.getCanvas().style.cursor = 'grab';                
             } else {
                 if (map.hasControl(navigation)) {
-                    map.removeControl(navigation);
+                    map.removeControl(navigation);     
                 }
                 map.dragPan.disable();
                 map.doubleClickZoom.disable();
                 map.getCanvas().style.cursor = 'default';
+            }
+
+            if (chapter.callback == "workAreas") {
+                map.on('mouseenter', 'dd-workareas', workAreasPopup);
+                map.on('mouseleave', 'dd-workareas', workAreasPopupOff);
+            } else {
                 map.off('mouseenter', 'dd-workareas', workAreasPopup);
                 map.off('mouseleave', 'dd-workareas', workAreasPopupOff);
             }

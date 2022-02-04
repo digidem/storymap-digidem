@@ -30,6 +30,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
+            mapInteractive: true,
             callback: "workAreas",
             onChapterEnter: [
                 {
@@ -60,6 +61,10 @@ var config = {
                     layer: "settlement-subdivision-label",
                     opacity: 0,
                 },
+                {
+                    layer: 'admin-0-boundary-disputed',
+                    opacity: 0
+                }, 
                 {
                     layer: 'admin-0-boundary',
                     opacity: 0
@@ -520,7 +525,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
-            callback: "",
+            callback: "workAreas",
             onChapterEnter: [
                 {
                     layer: "dd-workareas",
@@ -554,6 +559,10 @@ var config = {
                     layer: 'admin-0-boundary',
                     opacity: 1
                 },
+                {
+                    layer: 'admin-0-boundary-disputed',
+                    opacity: 1
+                }, 
 
 			],
             onChapterExit: [
@@ -603,6 +612,18 @@ var config = {
                 {
                     layer: 'admin-0-boundary',
                     opacity: 1
+                },
+                {
+                    layer: 'admin-0-boundary-disputed',
+                    opacity: 1
+                }, 
+                {
+                    layer: "dd-workareas",
+                    opacity: 0,
+                },  
+                {
+                    layer: 'native-land',
+                    opacity: 0
                 },          
                 { 
                     layer: "green territory",
@@ -1489,7 +1510,12 @@ var config = {
                 {
                     layer: 'admin-0-boundary',
                     opacity: 1
-                }
+                },
+                {
+                    layer: 'admin-0-boundary-disputed',
+                    opacity: 1
+                }, 
+
             ]
         },
         {
@@ -1504,7 +1530,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
-            callback: "",
+            callback: "workAreas",
             onChapterEnter: [
                 {
                     layer: "dd-workareas",
@@ -1623,7 +1649,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
-            callback: "",
+            callback: "workAreas",
             onChapterEnter: [
                 {
                     layer: "dd-workareas",
@@ -1679,6 +1705,11 @@ var config = {
                     opacity: 1
                 },        
                 {
+                    layer: 'admin-0-boundary-disputed',
+                    opacity: 1
+                }, 
+
+                {
                     layer: 'settlement-minor-label',
                     opacity: 1
                 },       
@@ -1726,7 +1757,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
-            callback: "",
+            callback: "workAreas",
             onChapterEnter: [
                 {
                     layer: "dd-workareas",
@@ -1785,6 +1816,10 @@ var config = {
                     layer: 'admin-0-boundary',
                     opacity: 1
                 },
+                {
+                    layer: 'admin-0-boundary-disputed',
+                    opacity: 1
+                }, 
                 {
                     layer: 'settlement-minor-label',
                     opacity: 0
