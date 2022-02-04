@@ -4,6 +4,7 @@ var config = {
     showMarkers: false,
     theme: 'dark',
     use3dTerrain: false,
+    useCustomLayers: true,
     projection: 'equirectangular',
     bookmarks: true,
     title: 'Technology in Solidarity with Frontline Technologies',
@@ -19,8 +20,8 @@ var config = {
             image: 'images/overview.jpg',
             caption: '',
             website: '<a href="https://www.digital-democracy.org/" target="_blank">Digital Democracy website</a>',
-            legend: '<img src="images/mapeo-icon-circle.png"><span id="text" style="vertical-align: super;">Mapeo actively in use</span>',
-            description: 'Digital Democracy partners with marginalized communities worldwide to build tools to defend their  environmental and human rights. We envision a healthy, vibrant planet where all people are able to participate in the decisions that govern their lives.<br><br>Our work lies in deep, trusting relationships with local partners. Digital Democracy supports communities who are working to defend their human and environmental rights, but who lack the tools to do so. Our local partners represent marginalized communities worldwide, including Indigenous Peoples and ethnic minorities, whose human rights are most severely impacted by environmental abuse. We train partners to use basic digital tools to gather, share, and manage information about environmental and human rights infractions.<br><br><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube-nocookie.com/embed/xw7SyRCOtEc?controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture"></iframe></div><br><br>Based on years of work with local communities, Digital Democracy observed persistent technological gaps that weren’t being met by corporate technologies. In 2013 we began to co-create tech solutions with our partners in the Amazon to develop a tool that would meet their needs, resulting in Mapeo, an open-source tool for frontline defenders.',
+            legend: '<img src="images/mapeo-icon-circle.png"><span id="text" style="vertical-align: super;">Mapeo actively in use</span><br><br><span style="font-size: 0.85em;"><em>Indigenous community names on the map courtesy of Native Land Digital</em></span>',
+            description: 'Digital Democracy partners with marginalized communities worldwide to build tools to defend their  environmental and human rights. We envision a healthy, vibrant planet where all people are able to participate in the decisions that govern their lives.<br><br>Our work lies in deep, trusting relationships with local partners. Digital Democracy supports communities who are working to defend their human and environmental rights, but who lack the tools to do so. Our local partners represent marginalized communities worldwide, including Indigenous Peoples and ethnic minorities, whose human rights are most severely impacted by environmental abuse. We train partners to use basic digital tools to gather, share, and manage information about environmental and human rights infractions.<br><br><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube-nocookie.com/embed/xw7SyRCOtEc?controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture"></iframe></div><br><br>Based on years of work with local communities, Digital Democracy observed persistent technological gaps that weren’t being met by corporate technologies. In 2013 we began to co-create tech solutions with our partners in the Amazon to develop a tool that would meet their needs, resulting in Mapeo, an open-source tool for frontline defenders.<br><br><strong>✋ Use the mouse cursor to pan around and zoom in on the map, and hover over locations to learn about our partners.</strong>',
                 location: {
                 center: [170, 0], 
 				zoom: 1.75,
@@ -29,8 +30,12 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
-            callback: "",
+            callback: "workAreas",
             onChapterEnter: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 1,
+                },
                 {
                     layer: "country-label",
                     opacity: 0,
@@ -59,16 +64,448 @@ var config = {
                     layer: 'native-land',
                     opacity: 1
                 },
-                {
-                    layer: "dd-workareas",
-                    opacity: 1,
-                }
-			],
-            onChapterExit: [
-                {
-                    layer: "dd-workareas",
+                { 
+                    layer: "green territory",
                     opacity: 0,
                 },
+                {
+                    layer: "chacra-areas",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-chacra-areas",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-palmera",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-palmera",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-moretal",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-moretal",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-toketibo",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-toketibo",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-miwago",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-miwago",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona peces",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-peces",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona animales",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona animales",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona rastrojo",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-animales-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona animales-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-cascada",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-cascada",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona de recoleccion",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-de-recoleccion",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers-large highlight",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers-large highlight",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers-large shadow",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers-large shadow",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers-large",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers-large",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers -small",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers -small",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-huangana",
+                    opacity: 0,
+                },
+                {
+                    layer: "new camino-huangana",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-jaguar",
+                    opacity: 0,
+                },
+                {
+                    layer: "new camino-jaguar",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-tapir",
+                    opacity: 0,
+                },
+                {
+                    layer: "new camino-tapir",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-sahino",
+                    opacity: 0,
+                },
+                {
+                    layer: "new camino-sahino",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-animales",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-animales copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "caminos-aventura",
+                    opacity: 0,
+                },
+                {
+                    layer: "new caminos-aventura",
+                    opacity: 0,
+                },
+                {
+                    layer: "caminos-viajar",
+                    opacity: 0,
+                },
+                {
+                    layer: "new caminos-viajar",
+                    opacity: 0,
+                },
+                {
+                    layer: "caminos-caseria",
+                    opacity: 0,
+                },
+                {
+                    layer: "new caminos-caseria",
+                    opacity: 0,
+                },
+                {
+                    layer: "label-caminos-viajar",
+                    opacity: 0,
+                },
+                {
+                    layer: "new label-caminos-viajar",
+                    opacity: 0,
+                },
+                {
+                    layer: "label-caminos-otros",
+                    opacity: 0,
+                },
+                {
+                    layer: "new label-caminos-otros",
+                    opacity: 0,
+                },
+                {
+                    layer: "Lagos",
+                    opacity: 0,
+                },
+                {
+                    layer: "new- Lagos",
+                    opacity: 0,
+                },
+                {
+                    layer: "Cazadero-cueva",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Cazadero-cueva",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona de caza",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona de caza",
+                    opacity: 0,
+                },
+                {
+                    layer: "Fauna",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Fauna",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona rastrojo copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "Flora-no labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Flora-no labels copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "Flora-with labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Flora-with labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Flora-arbol-especie",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Flora arbol especie",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-palmera label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-palmera label",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-toketibe-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-toketibo copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-cascada-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-cascada copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona de caza label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona de caza copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona de recoleccion label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-de-recoleccion copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "Pesca",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Pesca",
+                    opacity: 0,
+                },
+                {
+                    layer: "Otros-y-labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-otros-y-labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "cazadores",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-cazadores",
+                    opacity: 0,
+                },
+                {
+                    layer: "Banadero de sahino",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Banadero de sahino",
+                    opacity: 0,
+                },
+                {
+                    layer: "Historicos",
+                    opacity: 0,
+                },
+                {
+                    layer: "Historicos copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Historicos",
+                    opacity: 0,
+                },
+                {
+                    layer: "water points",
+                    opacity: 0,
+                },
+                {
+                    layer: "new water points",
+                    opacity: 0,
+                },
+                {
+                    layer: "water points labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-water points labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Lakes labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Lakes labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Casas",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-casas",
+                    opacity: 0,
+                },
+                {
+                    layer: "Casas labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-casas labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Community facilities",
+                    opacity: 0,
+                },
+                {
+                    layer: "new - community facilities",
+                    opacity: 0,
+                },
+                {
+                    layer: "new - celular",
+                    opacity: 0,
+                },
+                {
+                    layer: "chacra",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-chacra",
+                    opacity: 0,
+                },
+                {
+                    layer: "Campamento",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-campamento",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers -small label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers -small label",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers -large label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers -large label",
+                    opacity: 0,
+                },
+                {
+                    layer: "waorani-territory-area-8r1igc",
+                    opacity: 0,
+                },
+                {
+                    layer: "comunidades-waorani-85wt49",
+                    opacity: 0,
+                },
+                {
+                    layer: "wao-comunidad-centro-12-18-61njjo copy",
+                    opacity: 0,
+                },
+			],
+            onChapterExit: [
                 {
                     layer: 'native-land',
                     opacity: 0
@@ -81,7 +518,7 @@ var config = {
             hidden: true,
             location: {
                 center: [-77.28717, -1.22521], 
-				zoom: 3,
+				zoom: 5,
 				pitch: 0.00,
 				bearing: 0.00,
             },
@@ -89,6 +526,10 @@ var config = {
             rotateAnimation: false,
             callback: "",
             onChapterEnter: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 1,
+                },                
                 {
                     layer: "country-label",
                     opacity: 1,
@@ -112,10 +553,14 @@ var config = {
                 {
                     layer: 'admin-0-boundary',
                     opacity: 1
-                }
+                },
+
 			],
             onChapterExit: [
-
+                {
+                    layer: "dd-workareas",
+                    opacity: 0,
+                },
             ]
         },	
 		{
@@ -605,7 +1050,6 @@ var config = {
                 },
 			],
             onChapterExit: [
-                ,
                 { 
                     layer: "green territory",
                     opacity: 0,
@@ -1058,7 +1502,7 @@ var config = {
             hidden: true,
             location: {
                 center: [-71.284, -12.768], 
-				zoom: 3,
+				zoom: 5,
 				pitch: 0.00,
 				bearing: 0.00,
             },
@@ -1066,8 +1510,16 @@ var config = {
             rotateAnimation: false,
             callback: "",
             onChapterEnter: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 1,
+                },
 			],
             onChapterExit: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 0,
+                },
             ]
         },		        
 		{
@@ -1161,7 +1613,7 @@ var config = {
             hidden: true,
             location: {
                 center: [34.56696, 1.026], 
-				zoom: 3,
+				zoom: 5,
 				pitch: 0.00,
 				bearing: 0.00,
             },
@@ -1169,8 +1621,16 @@ var config = {
             rotateAnimation: false,
             callback: "",
             onChapterEnter: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 1,
+                },
 			],
             onChapterExit: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 0,
+                },
             ]
         },	
 		{
@@ -1248,7 +1708,7 @@ var config = {
             hidden: true,
             location: {
                 center: [-79.31420, 43.61287], 
-				zoom: 3,
+				zoom: 5,
 				pitch: 0.00,
 				bearing: 0.00,
             },
@@ -1256,8 +1716,16 @@ var config = {
             rotateAnimation: false,
             callback: "",
             onChapterEnter: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 1,
+                },
 			],
             onChapterExit: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 0,
+                },
             ]
         },	
 		{
