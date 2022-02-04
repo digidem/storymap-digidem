@@ -393,9 +393,11 @@
     if (config.bookmarks) {
         var bookmarksText = "<strong>Bookmarks</strong>: ";
         for (i = 0; i < config.chapters.length; i++) {
-            bookmarksText += `<a href=#${config.chapters[i].id}>${config.chapters[i].title}</a>`;
-            if (i != config.chapters.length - 1) {
-                bookmarksText += " | ";
+            if (config.chapters[i].title) {
+                bookmarksText += `<a href=#${config.chapters[i].id}>${config.chapters[i].title}</a>`;
+                if (i != config.chapters.length - 1) {
+                    bookmarksText += " | ";
+                }
             }
         }
 		var headerBookmarks = document.createElement('h5');

@@ -65,9 +65,60 @@ var config = {
                 }
 			],
             onChapterExit: [
+                {
+                    layer: "dd-workareas",
+                    opacity: 0,
+                },
+                {
+                    layer: 'native-land',
+                    opacity: 0
+                },
             ]
         },
-		        {
+        {
+            id: 'page1-before',
+            alignment: "left",
+            hidden: true,
+            location: {
+                center: [-77.28717, -1.22521], 
+				zoom: 3,
+				pitch: 0.00,
+				bearing: 0.00,
+            },
+            mapAnimation: "flyTo",
+            rotateAnimation: false,
+            callback: "",
+            onChapterEnter: [
+                {
+                    layer: "country-label",
+                    opacity: 1,
+                },
+                {
+                    layer: "state-label",
+                    opacity: 1,
+                },
+                {
+                    layer: "settlement-major-label",
+                    opacity: 1,
+                },
+                {
+                    layer: "settlement-minor-label",
+                    opacity: 1,
+                },
+                {
+                    layer: "settlement-subdivision-label",
+                    opacity: 1,
+                },
+                {
+                    layer: 'admin-0-boundary',
+                    opacity: 1
+                }
+			],
+            onChapterExit: [
+
+            ]
+        },	
+		{
             id: 'page1',
             alignment: "left",
             hidden: false,
@@ -112,43 +163,6 @@ var config = {
                     layer: 'admin-0-boundary',
                     opacity: 1
                 },          
-                {
-                    layer: "dd-workareas",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-reserve-label",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-community-labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-puestos",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-minero",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-reserve",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-community",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-buffer",
-                    opacity: 0,
-                },  
-                {
-                    layer: 'native-land',
-                    opacity: 0
-                },
-                ,
                 { 
                     layer: "green territory",
                     opacity: 0.44,
@@ -591,9 +605,472 @@ var config = {
                 },
 			],
             onChapterExit: [
+                ,
+                { 
+                    layer: "green territory",
+                    opacity: 0,
+                },
+                {
+                    layer: "chacra-areas",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-chacra-areas",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-palmera",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-palmera",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-moretal",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-moretal",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-toketibo",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-toketibo",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-miwago",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-miwago",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona peces",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-peces",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona animales",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona animales",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona rastrojo",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-animales-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona animales-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-cascada",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-cascada",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona de recoleccion",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-de-recoleccion",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers-large highlight",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers-large highlight",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers-large shadow",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers-large shadow",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers-large",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers-large",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers -small",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers -small",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-huangana",
+                    opacity: 0,
+                },
+                {
+                    layer: "new camino-huangana",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-jaguar",
+                    opacity: 0,
+                },
+                {
+                    layer: "new camino-jaguar",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-tapir",
+                    opacity: 0,
+                },
+                {
+                    layer: "new camino-tapir",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-sahino",
+                    opacity: 0,
+                },
+                {
+                    layer: "new camino-sahino",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-animales",
+                    opacity: 0,
+                },
+                {
+                    layer: "camino-animales copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "caminos-aventura",
+                    opacity: 0,
+                },
+                {
+                    layer: "new caminos-aventura",
+                    opacity: 0,
+                },
+                {
+                    layer: "caminos-viajar",
+                    opacity: 0,
+                },
+                {
+                    layer: "new caminos-viajar",
+                    opacity: 0,
+                },
+                {
+                    layer: "caminos-caseria",
+                    opacity: 0,
+                },
+                {
+                    layer: "new caminos-caseria",
+                    opacity: 0,
+                },
+                {
+                    layer: "label-caminos-viajar",
+                    opacity: 0,
+                },
+                {
+                    layer: "new label-caminos-viajar",
+                    opacity: 0,
+                },
+                {
+                    layer: "label-caminos-otros",
+                    opacity: 0,
+                },
+                {
+                    layer: "new label-caminos-otros",
+                    opacity: 0,
+                },
+                {
+                    layer: "Lagos",
+                    opacity: 0,
+                },
+                {
+                    layer: "new- Lagos",
+                    opacity: 0,
+                },
+                {
+                    layer: "Cazadero-cueva",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Cazadero-cueva",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona de caza",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona de caza",
+                    opacity: 0,
+                },
+                {
+                    layer: "Fauna",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Fauna",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona rastrojo copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "Flora-no labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Flora-no labels copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "Flora-with labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Flora-with labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Flora-arbol-especie",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Flora arbol especie",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-palmera label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-palmera label",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-toketibe-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-toketibo copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona-cascada-label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-cascada copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona de caza label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona de caza copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "zona de recoleccion label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-zona-de-recoleccion copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "Pesca",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Pesca",
+                    opacity: 0,
+                },
+                {
+                    layer: "Otros-y-labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-otros-y-labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "cazadores",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-cazadores",
+                    opacity: 0,
+                },
+                {
+                    layer: "Banadero de sahino",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Banadero de sahino",
+                    opacity: 0,
+                },
+                {
+                    layer: "Historicos",
+                    opacity: 0,
+                },
+                {
+                    layer: "Historicos copy",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Historicos",
+                    opacity: 0,
+                },
+                {
+                    layer: "water points",
+                    opacity: 0,
+                },
+                {
+                    layer: "new water points",
+                    opacity: 0,
+                },
+                {
+                    layer: "water points labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-water points labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Lakes labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-Lakes labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Casas",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-casas",
+                    opacity: 0,
+                },
+                {
+                    layer: "Casas labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-casas labels",
+                    opacity: 0,
+                },
+                {
+                    layer: "Community facilities",
+                    opacity: 0,
+                },
+                {
+                    layer: "new - community facilities",
+                    opacity: 0,
+                },
+                {
+                    layer: "new - celular",
+                    opacity: 0,
+                },
+                {
+                    layer: "chacra",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-chacra",
+                    opacity: 0,
+                },
+                {
+                    layer: "Campamento",
+                    opacity: 0,
+                },
+                {
+                    layer: "new-campamento",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers -small label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers -small label",
+                    opacity: 0,
+                },
+                {
+                    layer: "Rivers -large label",
+                    opacity: 0,
+                },
+                {
+                    layer: "new Rivers -large label",
+                    opacity: 0,
+                },
+                {
+                    layer: "waorani-territory-area-8r1igc",
+                    opacity: 0,
+                },
+                {
+                    layer: "comunidades-waorani-85wt49",
+                    opacity: 0,
+                },
+                {
+                    layer: "wao-comunidad-centro-12-18-61njjo copy",
+                    opacity: 0,
+                },
+                {
+                    layer: 'admin-0-boundary',
+                    opacity: 1
+                }
             ]
         },
-		        {
+        {
+            id: 'page2-before',
+            alignment: "left",
+            hidden: true,
+            location: {
+                center: [-71.284, -12.768], 
+				zoom: 3,
+				pitch: 0.00,
+				bearing: 0.00,
+            },
+            mapAnimation: "flyTo",
+            rotateAnimation: false,
+            callback: "",
+            onChapterEnter: [
+			],
+            onChapterExit: [
+            ]
+        },		        
+		{
             id: 'page2',
             alignment: "left",
             hidden: false,
@@ -641,457 +1118,62 @@ var config = {
                 {
                     layer: "eca-buffer",
                     opacity: 1,
-                },
-                {
-                    layer: 'admin-0-boundary',
-                    opacity: 1
-                },
-                { 
-                    layer: "green territory",
-                    opacity: 0,
-                },
-                {
-                    layer: "chacra-areas",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-chacra-areas",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-palmera",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-palmera",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-moretal",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-moretal",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-toketibo",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-toketibo",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-miwago",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-miwago",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona peces",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-peces",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona animales",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona animales",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona rastrojo",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-animales-label",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona animales-label",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-cascada",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-cascada",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona de recoleccion",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-de-recoleccion",
-                    opacity: 0,
-                },
-                {
-                    layer: "Rivers-large highlight",
-                    opacity: 0,
-                },
-                {
-                    layer: "new Rivers-large highlight",
-                    opacity: 0,
-                },
-                {
-                    layer: "Rivers-large shadow",
-                    opacity: 0,
-                },
-                {
-                    layer: "new Rivers-large shadow",
-                    opacity: 0,
-                },
-                {
-                    layer: "Rivers-large",
-                    opacity: 0,
-                },
-                {
-                    layer: "new Rivers-large",
-                    opacity: 0,
-                },
-                {
-                    layer: "Rivers -small",
-                    opacity: 0,
-                },
-                {
-                    layer: "new Rivers -small",
-                    opacity: 0,
-                },
-                {
-                    layer: "camino-huangana",
-                    opacity: 0,
-                },
-                {
-                    layer: "new camino-huangana",
-                    opacity: 0,
-                },
-                {
-                    layer: "camino-jaguar",
-                    opacity: 0,
-                },
-                {
-                    layer: "new camino-jaguar",
-                    opacity: 0,
-                },
-                {
-                    layer: "camino-tapir",
-                    opacity: 0,
-                },
-                {
-                    layer: "new camino-tapir",
-                    opacity: 0,
-                },
-                {
-                    layer: "camino-sahino",
-                    opacity: 0,
-                },
-                {
-                    layer: "new camino-sahino",
-                    opacity: 0,
-                },
-                {
-                    layer: "camino-animales",
-                    opacity: 0,
-                },
-                {
-                    layer: "camino-animales copy",
-                    opacity: 0,
-                },
-                {
-                    layer: "caminos-aventura",
-                    opacity: 0,
-                },
-                {
-                    layer: "new caminos-aventura",
-                    opacity: 0,
-                },
-                {
-                    layer: "caminos-viajar",
-                    opacity: 0,
-                },
-                {
-                    layer: "new caminos-viajar",
-                    opacity: 0,
-                },
-                {
-                    layer: "caminos-caseria",
-                    opacity: 0,
-                },
-                {
-                    layer: "new caminos-caseria",
-                    opacity: 0,
-                },
-                {
-                    layer: "label-caminos-viajar",
-                    opacity: 0,
-                },
-                {
-                    layer: "new label-caminos-viajar",
-                    opacity: 0,
-                },
-                {
-                    layer: "label-caminos-otros",
-                    opacity: 0,
-                },
-                {
-                    layer: "new label-caminos-otros",
-                    opacity: 0,
-                },
-                {
-                    layer: "Lagos",
-                    opacity: 0,
-                },
-                {
-                    layer: "new- Lagos",
-                    opacity: 0,
-                },
-                {
-                    layer: "Cazadero-cueva",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-Cazadero-cueva",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona de caza",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona de caza",
-                    opacity: 0,
-                },
-                {
-                    layer: "Fauna",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-Fauna",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona rastrojo copy",
-                    opacity: 0,
-                },
-                {
-                    layer: "Flora-no labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "Flora-no labels copy",
-                    opacity: 0,
-                },
-                {
-                    layer: "Flora-with labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "new Flora-with labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "Flora-arbol-especie",
-                    opacity: 0,
-                },
-                {
-                    layer: "new Flora arbol especie",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-palmera label",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-palmera label",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-toketibe-label",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-toketibo copy",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona-cascada-label",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-cascada copy",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona de caza label",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona de caza copy",
-                    opacity: 0,
-                },
-                {
-                    layer: "zona de recoleccion label",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-zona-de-recoleccion copy",
-                    opacity: 0,
-                },
-                {
-                    layer: "Pesca",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-Pesca",
-                    opacity: 0,
-                },
-                {
-                    layer: "Otros-y-labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-otros-y-labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "cazadores",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-cazadores",
-                    opacity: 0,
-                },
-                {
-                    layer: "Banadero de sahino",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-Banadero de sahino",
-                    opacity: 0,
-                },
-                {
-                    layer: "Historicos",
-                    opacity: 0,
-                },
-                {
-                    layer: "Historicos copy",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-Historicos",
-                    opacity: 0,
-                },
-                {
-                    layer: "water points",
-                    opacity: 0,
-                },
-                {
-                    layer: "new water points",
-                    opacity: 0,
-                },
-                {
-                    layer: "water points labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-water points labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "Lakes labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-Lakes labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "Casas",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-casas",
-                    opacity: 0,
-                },
-                {
-                    layer: "Casas labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "new-casas labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "Community facilities",
-                    opacity: 0,
-                },
-                {
-                    layer: "new - community facilities",
-                    opacity: 0,
-                },
-                {
-                    layer: "new - celular",
-                    opacity: 0,
-                },
+                }
+			],
+            onChapterExit: [
                 {
-                    layer: "chacra",
+                    layer: "eca-reserve-label",
                     opacity: 0,
                 },
                 {
-                    layer: "new-chacra",
+                    layer: "eca-community-labels",
                     opacity: 0,
                 },
                 {
-                    layer: "Campamento",
+                    layer: "eca-puestos",
                     opacity: 0,
                 },
                 {
-                    layer: "new-campamento",
+                    layer: "eca-minero",
                     opacity: 0,
                 },
                 {
-                    layer: "Rivers -small label",
+                    layer: "eca-reserve",
                     opacity: 0,
                 },
                 {
-                    layer: "new Rivers -small label",
+                    layer: "eca-community",
                     opacity: 0,
                 },
                 {
-                    layer: "Rivers -large label",
+                    layer: "eca-buffer",
                     opacity: 0,
-                },
-                {
-                    layer: "new Rivers -large label",
-                    opacity: 0,
-                },
-                {
-                    layer: "waorani-territory-area-8r1igc",
-                    opacity: 0,
-                },
+                },  
                 {
-                    layer: "comunidades-waorani-85wt49",
-                    opacity: 0,
+                    layer: 'native-land',
+                    opacity: 0
                 },
-                {
-                    layer: "wao-comunidad-centro-12-18-61njjo copy",
-                    opacity: 0,
-                }  
-
+            ]
+        },
+        {
+            id: 'page3-before',
+            alignment: "left",
+            hidden: true,
+            location: {
+                center: [34.56696, 1.026], 
+				zoom: 3,
+				pitch: 0.00,
+				bearing: 0.00,
+            },
+            mapAnimation: "flyTo",
+            rotateAnimation: false,
+            callback: "",
+            onChapterEnter: [
 			],
             onChapterExit: [
             ]
-        },
-		        {
+        },	
+		{
             id: 'page3',
             alignment: "left",
             hidden: false,
@@ -1139,34 +1221,6 @@ var config = {
                 {
                     layer: 'state-label',
                     opacity: 1
-                },
-                {
-                    layer: "eca-reserve-label",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-community-labels",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-puestos",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-minero",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-reserve",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-community",
-                    opacity: 0,
-                },
-                {
-                    layer: "eca-buffer",
-                    opacity: 0,
                 }
 			],
             onChapterExit: [
@@ -1187,8 +1241,26 @@ var config = {
                     opacity: 0
                 },
             ]
-        },			
-		        {
+        },		
+        {
+            id: 'page4-before',
+            alignment: "left",
+            hidden: true,
+            location: {
+                center: [-79.31420, 43.61287], 
+				zoom: 3,
+				pitch: 0.00,
+				bearing: 0.00,
+            },
+            mapAnimation: "flyTo",
+            rotateAnimation: false,
+            callback: "",
+            onChapterEnter: [
+			],
+            onChapterExit: [
+            ]
+        },	
+		{
             id: 'page4',
             alignment: "left",
             hidden: false,
