@@ -492,6 +492,7 @@
         zoom: config.chapters[0].location.zoom,
         bearing: config.chapters[0].location.bearing,
         pitch: config.chapters[0].location.pitch,
+        transformRequest: transformRequest,
         // make storymap partially interactive
         interactive: true,
         dragPan: false,
@@ -499,7 +500,6 @@
         doubleClickZoom: false,
         scrollZoom: false,
         touchZoomRotate: false,
-        transformRequest: transformRequest,
         // set custom projection
         projection: config.projection
     });
@@ -598,7 +598,6 @@
                 map.doubleClickZoom.disable();
                 map.getCanvas().style.cursor = 'default';
                 turnPopupsOff('dd-workareas');
-
             }
 
             // custom properties for chapters with callback (Dd storymap specific)
