@@ -6,6 +6,8 @@ var config = {
     use3dTerrain: false,
     useCustomLayers: true, // for custom sources and layers added to the storymap in sources.js
     projection: 'equirectangular', // to change map projection
+    inset: true,
+    legend: true,
     bookmarks: true, // to add bookmarks to header and footer
     title: 'Technology in Solidarity with Frontline Technologies',
     logo: 'images/Digital Democracy.png', // to add a logo to the header
