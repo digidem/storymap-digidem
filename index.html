@@ -561,7 +561,7 @@
             scrollZoom: false,
             touchZoomRotate: false,
             // set custom projection
-            projection: { name: 'globe'}
+            projection: { name: 'globe'},
         });
 
         // Create a inset map if enabled in config.js
@@ -611,6 +611,14 @@
                     }
                 });
             };
+
+            map.setFog({
+                'horizon-blend': 0.02,
+                'star-intensity': 0.15,
+                'color': '#ffffff',
+                'high-color': '#008cff',
+                'space-color': '#000000'
+            });
 
             // add custom layers
             if (config.useCustomLayers) {
@@ -695,6 +703,9 @@
                     // custom properties for chapters with callback (Dd storymap specific)
                     if (chapter.callback == "workAreas") {
                         turnPopupsOn('dd-workareas');
+                        const center = map.getCenter();
+                        const newCenter = [center.lng + 360, center.lat];
+                        map.easeTo({ center: newCenter, duration: 20000, easing: n => n });
                     } else {
                         turnPopupsOff('dd-workareas');
                     }
