@@ -32,6 +32,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
+            spinGlobe: true,
             mapInteractive: true,
             callback: "workAreas",
             onChapterEnter: [
