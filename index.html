@@ -561,7 +561,7 @@
             scrollZoom: false,
             touchZoomRotate: false,
             // set custom projection
-            projection: { name: 'globe'},
+            projection: config.projection,
         });
 
         // Create a inset map if enabled in config.js
@@ -666,6 +666,7 @@
 
                     response.element.classList.add('active');
                     map[chapter.mapAnimation || 'flyTo'](chapter.location);
+                    
                     // Incase you do not want to have a dynamic inset map,
                     // rather want to keep it a static view but still change the
                     // bbox as main map move: comment out the below if section.
