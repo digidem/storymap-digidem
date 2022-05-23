@@ -666,7 +666,7 @@
 
                     response.element.classList.add('active');
                     map[chapter.mapAnimation || 'flyTo'](chapter.location);
-                    
+
                     // Incase you do not want to have a dynamic inset map,
                     // rather want to keep it a static view but still change the
                     // bbox as main map move: comment out the below if section.
@@ -699,9 +699,15 @@
                         map.doubleClickZoom.disable();
                         map.getCanvas().style.cursor = 'default';
                         turnPopupsOff('dd-workareas');
+                        turnPopupsOff('dd-workareas-past');
                     }
 
                     // custom properties for chapters with callback (Dd storymap specific)
+                    if (chapter.id == "page0") {
+                        turnPopupsOn('dd-workareas-past');
+                    } else {
+                        turnPopupsOff('dd-workareas-past');
+                    }
                     if (chapter.callback == "workAreas") {
                         turnPopupsOn('dd-workareas');
                     } else {
@@ -727,7 +733,7 @@
                         });
                     }
 
-                    if (chapter.spinGlobe) {
+                    if (chapter.spinGlobe && config.projection == 'globe') {
                         map.once('moveend', () => {
                             const center = map.getCenter();
                             const newCenter = [center.lng + 360, center.lat];
