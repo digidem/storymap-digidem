@@ -9,11 +9,11 @@ var config = {
     inset: true,
     legend: true,
     bookmarks: true, // to add bookmarks to header and footer
-    title: 'Technology in Solidarity with Frontline Communities',
+    title: 'Tecnología en Solidaridad con Comunidades de Primera Línea',
     logo: 'images/Digital Democracy.png', // to add a logo to the header
-    translation: 'es',
-	mobileView: '<div id="rotate-mobile"><em>For optimal viewing of this storytelling map on mobile, rotate your device to a horizontal orientation.</em><br><br><img src="images/device.png">', // to add custom messaging in the header for mobile devices
-    footer: '<strong>Learn more about and follow Digital Democracy:</strong><br><a href="https://digital-democracy.org" class="fas fa-link" target="_blank"></a>&nbsp;<a href="https://www.instagram.com/digidem/" class="fab fa-instagram" target="_blank"></a>&nbsp;<a href="http://twitter.com/DigiDem" class="fab fa-twitter" target="_blank"></a>&nbsp;<a href="https://www.facebook.com/digidemocracy/" class="fab fa-facebook-f" target="_blank"></a>&nbsp;<a href="https://www.linkedin.com/company/-digital-democracy/" class="fab fa-linkedin" target="_blank"></a>&nbsp;<a href="https://www.youtube.com/user/digitaldemocracycam" class="fab fa-youtube" target="_blank"></a>',
+    translation: 'en',
+	mobileView: '<div id="rotate-mobile"><em>Para una visualización óptima de este mapa narrativo en dispositivos móviles, gire su dispositivo a una orientación horizontal.</em><br><br><img src="images/device.png">', // to add custom messaging in the header for mobile devices
+    footer: '<strong>Para obtener más información y seguir Digital Democracy:</strong><br><a href="https://digital-democracy.org" class="fas fa-link" target="_blank"></a>&nbsp;<a href="https://www.instagram.com/digidem/" class="fab fa-instagram" target="_blank"></a>&nbsp;<a href="http://twitter.com/DigiDem" class="fab fa-twitter" target="_blank"></a>&nbsp;<a href="https://www.facebook.com/digidemocracy/" class="fab fa-facebook-f" target="_blank"></a>&nbsp;<a href="https://www.linkedin.com/company/-digital-democracy/" class="fab fa-linkedin" target="_blank"></a>&nbsp;<a href="https://www.youtube.com/user/digitaldemocracycam" class="fab fa-youtube" target="_blank"></a>',
     chapters: [
         {
             id: 'page0',
@@ -1703,7 +1703,7 @@ var config = {
             hidden: false,
             title: 'Historical land tenure mapping with the Ogiek (Kenya)',
             image: 'images/ogiek.jpg',
-            caption: 'Photo credit: Phoebe Ndiema (CIPDP)',
+            caption: 'Autor de la foto: Phoebe Ndiema (CIPDP)',
             author: 'Rudo Kemper, Digital Democracy',
             website: '<a href="https://www.forestpeoples.org/en/partner/chepkitale-indigenous-peoples-development-project-cipdp" target="_blank">CIPDP website</a>',
             legend: '<span id="block" style="background-color: #f7b322; opacity: 0.5;"></span><span id="text">Chepkitale Community Lands</span><br><span id="block" style="background-color: #1b9d2a; opacity: 0.5;"></span><span id="text">Mount Elgon National Park</span><br><span id="block" style="background-color: #55f538; opacity: 0.5;"></span><span id="text">Forest reserves</span><br><span id="block" style="background-color: #ee4444; opacity: 0.5;"></span><span id="text">Encroachment area</span><br>',
@@ -1821,7 +1821,7 @@ var config = {
             hidden: false,
             title: 'Mapping oral histories with Ohneganos (Canada)',
             image: 'images/ohneganos.jpg',
-            caption: 'Photo credit: Rudo Kemper (Digital Democracy)',
+            caption: 'Autor de la foto: Rudo Kemper (Digital Democracy)',
             author: 'Rudo Kemper, Digital Democracy',
             website: '<a href="https://www.ohneganos.com/" target="_blank">Ohneganos website</a>',
             legend: '<span id="block" style="background-color: #c3beb1; opacity: 0.5;"></span><span id="text">Haldimand Tract</span><br><span id="block" style="background-color: #f39b16; opacity: 0.5;"></span><span id="text">Six Nations Reserve of the Grand River</span><br>',

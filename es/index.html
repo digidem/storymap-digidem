@@ -4,17 +4,17 @@
 <head>
     <link rel="icon" href="favicon.ico" sizes="32x32" />
     <meta charset='utf-8' />
-    <title>Digital Democracy: Technology in Solidarity with Frontline Communities</title>
+    <title>Digital Democracy: Tecnología en Solidaridad con Comunidades de Primera Línea</title>
     <meta name="description"
-        content="Digital Democracy partners with marginalized communities worldwide to build and use tools to defend their environmental & human rights." />
+        content="Digital Democracy se asocia con comunidades marginadas de todo el mundo para construir y utilizar herramientas para defender sus derechos ambientales y humanos." />
     <link rel="canonical" href="https://www.digital-democracy.org/storymap" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Digital Democracy: Technology in Solidarity with Frontline Communities" />
+    <meta property="og:title" content="Digital Democracy: Tecnología en Solidaridad con Comunidades de Primera Línea" />
     <meta property="og:description"
-        content="Digital Democracy partners with marginalized communities worldwide to build and use tools to defend their environmental & human rights." />
+        content="Digital Democracy se asocia con comunidades marginadas de todo el mundo para construir y utilizar herramientas para defender sus derechos ambientales y humanos." />
     <meta property="og:url" content="https://www.digital-democracy.org/storymap" />
-    <meta property="og:site_name" content="Digital Democracy: Technology in Solidarity with Frontline Communities" />
+    <meta property="og:site_name" content="Digital Democracy: Tecnología en Solidaridad con Comunidades de Primera Línea" />
     <meta property="article:publisher" content="https://facebook.com/digidemocracy" />
     <meta property="og:image"
         content="images/thumbnail.jpg" />
@@ -22,9 +22,9 @@
     <meta property="og:image:height" content="400" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@DigiDem" />
-    <meta name="twitter:title" content="Digital Democracy: Technology in Solidarity with Frontline Communities" />
+    <meta name="twitter:title" content="Digital Democracy: Tecnología en Solidaridad con Comunidades de Primera Línea" />
     <meta name="twitter:description"
-        content="Digital Democracy partners with marginalized communities worldwide to build and use tools to defend their environmental & human rights." />
+        content="Digital Democracy se asocia con comunidades marginadas de todo el mundo para construir y utilizar herramientas para defender sus derechos ambientales y humanos." />
     <meta name="twitter:image"
         content="images/thumbnail.jpg" />
     <meta name="twitter:url" content="https://www.digital-democracy.org/storymap" />
@@ -452,7 +452,7 @@
         // add bookmarks for chapters with title, append to header and footer
         if (config.bookmarks) {
             var bookmarks = document.getElementById('bookmarks');
-            var bookmarksText = "<p><strong>Bookmarks</strong>: ";
+            var bookmarksText = "<p><strong>Marcadores</strong>: ";
             for (i = 0; i < config.chapters.length; i++) {
                 if (config.chapters[i].title) {
                     bookmarksText += `<a href=#${config.chapters[i].id}>${config.chapters[i].title}</a>`;
@@ -530,7 +530,7 @@
                 // add author to chapters if found in config
                 if (record.author) {
                     author = document.createElement('p');
-                    author.innerHTML = '<strong>By ' + record.author + '</strong>';
+                    author.innerHTML = '<strong>Por ' + record.author + '</strong>';
                     chapter.appendChild(author);
                 }
 
@@ -544,7 +544,7 @@
                 // add return to top link to each chapter
                 var returnTop = document.createElement('p');
                 returnTop.setAttribute("class", "returntop");
-                returnTop.innerHTML = '<a href="#header">Back to top</a>';
+                returnTop.innerHTML = '<a href="#header">Volver arriba</a>';
                 chapter.appendChild(returnTop);
             }
 
