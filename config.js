@@ -11,7 +11,8 @@ var config = {
     bookmarks: true, // to add bookmarks to header and footer
     title: 'Technology in Solidarity with Frontline Communities',
     logo: 'images/Digital Democracy.png', // to add a logo to the header
-	mobileview: '<div id="rotate-mobile"><em>For optimal viewing of this storytelling map on mobile, rotate your device to a horizontal orientation.</em><br><br><img src="images/device.png">', // to add custom messaging in the header for mobile devices
+    translation: 'es',
+	mobileView: '<div id="rotate-mobile"><em>For optimal viewing of this storytelling map on mobile, rotate your device to a horizontal orientation.</em><br><br><img src="images/device.png">', // to add custom messaging in the header for mobile devices
     footer: '<a href="https://digital-democracy.org" class="fas fa-link" target="_blank"></a>&nbsp;<a href="https://www.instagram.com/digidem/" class="fab fa-instagram" target="_blank"></a>&nbsp;<a href="http://twitter.com/DigiDem" class="fab fa-twitter" target="_blank"></a>&nbsp;<a href="https://www.facebook.com/digidemocracy/" class="fab fa-facebook-f" target="_blank"></a>&nbsp;<a href="https://www.linkedin.com/company/-digital-democracy/" class="fab fa-linkedin" target="_blank"></a>&nbsp;<a href="https://www.youtube.com/user/digitaldemocracycam" class="fab fa-youtube" target="_blank"></a>',
     chapters: [
         {
