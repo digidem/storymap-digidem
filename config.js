@@ -23,9 +23,9 @@ var config = {
             caption: '',
             website: '<a href="https://www.digital-democracy.org/" target="_blank">Digital Democracy website</a>',
             legend: '<img src="images/mapeo-icon-circle.svg"><span id="text" style="vertical-align: super;">Active partners and users of our tools</span><br><img src="images/mapeo-icon-circle-gray.svg"><span id="text" style="vertical-align: super;">Past Digital Democracy project areas</span><br><br><span style="font-size: 0.85em;"><em>Indigenous community names on the map courtesy of Native Land Digital</em></span>',
-            description: 'Digital Democracy partners with marginalized communities worldwide to build tools to defend their  environmental and human rights. We envision a healthy, vibrant planet where all people are able to participate in the decisions that govern their lives.<br><br>Our work lies in deep, trusting relationships with local partners. Digital Democracy supports communities who are working to defend their human and environmental rights, but who lack the tools to do so. Our local partners represent marginalized communities worldwide, including Indigenous Peoples and ethnic minorities, whose human rights are most severely impacted by environmental abuse. We train partners to use basic digital tools to gather, share, and manage information about environmental and human rights infractions.<br><br><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube-nocookie.com/embed/xw7SyRCOtEc?controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture"></iframe></div><br><br>Based on years of work with local communities, Digital Democracy observed persistent technological gaps that weren’t being met by corporate technologies. In 2013 we began to co-create tech solutions with our partners in the Amazon to develop a tool that would meet their needs, resulting in Mapeo, an open-source tool for frontline defenders.<br><br><em>This story map is a living document, and we will be adding more partner stories in the future. Stay tuned!</em><br><br><strong>✋ Click or press on the map to stop it from spinning, pan around and zoom in on the map, and hover over locations to learn about our partners.</strong>',
+            description: 'Digital Democracy partners with marginalized communities worldwide to build tools to defend their  environmental and human rights. We envision a healthy, vibrant planet where all people are able to participate in the decisions that govern their lives.<br><br>Our work lies in deep, trusting relationships with local partners. Digital Democracy supports communities who are working to defend their human and environmental rights, but who lack the tools to do so. Our local partners represent marginalized communities worldwide, including Indigenous Peoples and ethnic minorities, whose human rights are most severely impacted by environmental abuse. We train partners to use basic digital tools to gather, share, and manage information about environmental and human rights infractions.<br><br><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube-nocookie.com/embed/xw7SyRCOtEc?controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture"></iframe></div><br><br>Based on years of work with local communities, Digital Democracy observed persistent technological gaps that weren’t being met by corporate technologies. In 2013 we began to co-create tech solutions with our partners in the Amazon to develop a tool that would meet their needs, resulting in Mapeo, an open-source tool for frontline defenders.<br><br><em>This story map is a living document, and we will be adding more partner stories in the future. Stay tuned!</em><br><br><strong>✋ Click or press on the map to stop it from spinning, pan around and zoom in on the map, and hover over locations to learn about our partners, past and present.</strong>',
                 location: {
-                center: [-65, 5], 
+                center: [-75, 7], 
 				zoom: 3,
 				pitch: 0.00,
 				bearing: 0.00,
@@ -35,7 +35,7 @@ var config = {
             rotateAnimation: false,
             spinGlobe: true,
             mapInteractive: true,
-            callback: "workAreas",
+            callback: "browseMap",
             onChapterEnter: [
                 {
                     layer: "dd-workareas",
@@ -590,14 +590,14 @@ var config = {
             caption: 'Pava Yeti from Kiwaro with the community’s completed territory map, Dd 2017.',
             author: 'Aliya Ryan, Digital Democracy',
             website: '<a href="https://www.amazonfrontlines.org/who-should-decide/" target="_blank">Who Should Decide campaign featuring the Waorani map</a>',
-            legend: '<span id="text">TBD</span>',
+            legend: '<span id="text">All map data and symbol design are the intellectual property of the Waorani Nation and the participating communities. No reproduction of use of this data is permitted without their prior consultation.</span>',
             description: '<em>"Waorani Territory is our home, and it is full of life, but it is a fragile and threatened life which we will always fight to protect. The State comes and shows us maps but we don\'t recognize them: their maps are empty, but our territory is full and alive... Making the maps has built unity and solidarity amongst our people. And they are an opportunity to tell the world our story, ourselves."</em> Oswando Nenquimo<br><br>The Waorani people live in the heart of the Ecaudorian Amazon. In 2015 they started a territory mapping project to defend their lands, culture and the livelihoods of their children from oil operations and other extractive activities. The Waorani mapping team, lead by Oswando Nenquimo, worked alongside Alianza Ceibo and Amazon Frontlines, and partnered with Digital Democracy to codevelop Mapeo. They used Mapeo throughout the 3 years of their mapping project, and are now using it as part of ongoing territory monitoring and defense work. The Waorani used the maps they made of the 22 communities in the Pastaza region in a courtcase against the Ecuadorian Government in 2019, in opposition to a new oil concession. The judges\' landmark ruling agreed that the concession had been created without a due consultation process, and half a million acres of the Waorani\'s rainforest home was protected from devastation.',
             location: {
                 center: [-77.28717, -1.22521], 
 				zoom: 13.5,
 				pitch: 0.00,
 				bearing: 0.00,
-                speed: 0.7
+                speed: 0.7,
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
@@ -633,6 +633,10 @@ var config = {
                 }, 
                 {
                     layer: "dd-workareas",
+                    opacity: 0,
+                },
+                {
+                    layer: "dd-workareas-past",
                     opacity: 0,
                 },
                 {
@@ -1552,6 +1556,10 @@ var config = {
                     opacity: 1,
                 },
                 {
+                    layer: "dd-workareas-past",
+                    opacity: 0,
+                },
+                {
                     layer: 'native-land',
                     opacity: 1
                 },
@@ -1569,7 +1577,7 @@ var config = {
             author: 'Mar Cartró Sabaté, Digital Democracy',
             website: '<a href="https://amarakaeri.org/" target="_blank">ECA Amarakaeri website</a>',
             legend: '<img src="images/castle-15.png"><span id="text">Control station</span><br><span id="block" style="background-color: #b5f231; opacity: 0.5;"></span><span id="text">Amarakaeri Communal Reserve</span><br><span id="block" style="background-color: #3adf11; opacity: 0.5;"></span><span id="text">Buffer zone</span><br><span id="block" style="background-color: #f1a241; opacity: 0.5;"></span><span id="text">Community area</span><br><span id="block" style="background-color: #fd1717; opacity: 0.5;"></span><span id="text">Mining concession</span>',
-            description: 'In the Peruvian Madre de Dios department, the Harakbut, Matsiguenka, and Yine Peoples have monitored and protected their ancestral territories for centuries and consider themselves as owners and guards of this part of the Amazon. In 2002, following 18 years of constant struggle, part of their ancestral territory was recognized as a natural protected area, called the Amarakaeri Communal Reserve. Since 2006, the reserve is co-managed between ten Indigenous communities (organized by the ECA Amarakaeri organization) and the National Service of Protected Areas (SERNANP), with the support of two Indigenous organizations (FENAMAD and COHARYIMA). Community guards, park rangers and technicians use Mapeo, together with other state-of-the-art Technology, to protect their ancestral forests from illegal mining and logging. Their exemplary efforts have been recognized by the Equator Prize in 2019. Moreover, the IUCN included the Amarakaeri Communal Reserve in their Green list because of its high conservation status.<br><br><em>“The Mapeo Mobile and Mapeo Desktop tools have been implemented in our monitoring system in Amarakaeri, and with them, we have developed an early warning system on the affectation of communal territories and the Amarakari Communal Reserve itself.”</em> - Walter Quertehuari Dariquebe, President of the ECA Amarakaeri.<br><br><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube-nocookie.com/embed/4Dup9MDxWJM?controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture"></iframe></div>',
+            description: 'In the Peruvian Madre de Dios department, the Harakbut, Matsiguenka, and Yine Peoples have monitored and protected their ancestral territories for centuries and consider themselves as owners and guards of this part of the Amazon. In 2002, following 18 years of constant struggle, part of their ancestral territory was recognized as a natural protected area, called the Amarakaeri Communal Reserve. Since 2006, the reserve is co-managed between ten Indigenous communities (organized by the Executor of the Amarakaeri Communal Reserve Administration Contract, or ECA Amarakaeri) and the National Service of Protected Areas (SERNANP), with the support of two Indigenous organizations (FENAMAD and COHARYIMA). Community guards, park rangers and technicians use Mapeo, together with other state-of-the-art Technology, to protect their ancestral forests from illegal mining and logging and interrelate ancestral knowledge of surveillance and monitoring with scientific knowledge. Their exemplary efforts have been recognized by the Equator Prize in 2019. Moreover, the IUCN included the Amarakaeri Communal Reserve in their Green list because of its high conservation status. ECA Amarakaeri works closely with Digital Democracy to further develop and improve Mapeo, continually testing it and providing feedback on improving the tool and what features need to be created or improved.<br><br><em>“The Mapeo Mobile and Mapeo Desktop tools have been implemented in our monitoring system in Amarakaeri, and with them, we have developed an early warning system on the affectation of communal territories and the Amarakari Communal Reserve itself.”</em> - Walter Quertehuari Dariquebe, President of the ECA Amarakaeri.<br><br><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube-nocookie.com/embed/4Dup9MDxWJM?controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture"></iframe></div>',
             location: {
                 center: [-71.284, -12.768], 
 				zoom: 9,
@@ -1579,7 +1587,7 @@ var config = {
             },
             mapAnimation: "flyTo",
             rotateAnimation: false,
-            callback: "",
+            callback: "ecaMap",
             onChapterEnter: [
                 {
                     layer: "eca-reserve-label",
@@ -1611,6 +1619,10 @@ var config = {
                 },
                 {
                     layer: "dd-workareas",
+                    opacity: 0,
+                },
+                {
+                    layer: "dd-workareas-past",
                     opacity: 0,
                 },
                 {
@@ -1671,6 +1683,10 @@ var config = {
                 {
                     layer: "dd-workareas",
                     opacity: 1,
+                },
+                {
+                    layer: "dd-workareas-past",
+                    opacity: 0,
                 },
                 {
                     layer: 'native-land',
@@ -1740,6 +1756,10 @@ var config = {
                     opacity: 0,
                 },
                 {
+                    layer: "dd-workareas-past",
+                    opacity: 0,
+                },
+                {
                     layer: 'native-land',
                     opacity: 0
                 },
@@ -1781,6 +1801,10 @@ var config = {
                 {
                     layer: "dd-workareas",
                     opacity: 1,
+                },
+                {
+                    layer: "dd-workareas-past",
+                    opacity: 0,
                 },
                 {
                     layer: 'native-land',
@@ -1850,6 +1874,10 @@ var config = {
                 },
                 {
                     layer: "dd-workareas",
+                    opacity: 0,
+                },
+                {
+                    layer: "dd-workareas-past",
                     opacity: 0,
                 },
                 {
